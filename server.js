@@ -52,6 +52,12 @@ app.get('/bad',(req,res) => {
 	res.send({
 		errorMessage : "Unable to connect"
 	})
+});
+
+app.get('/projects',(req,res) => {
+	res.render('projects.hbs',{
+		title : "list of projects"
+	})
 })
 
 app.listen(port,() => {
